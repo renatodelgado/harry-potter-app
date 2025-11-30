@@ -88,24 +88,6 @@ npx expo start -c
 
 ------------------------------------------------------------------------
 
-## 🖼️ Screenshots
-
-Crie a pasta `screenshots/` na raiz do projeto e coloque imagens com
-estes nomes:
-
-    screenshots/
-      home.jpg
-      characters.jpg
-      character-detail.jpg
-      spells.jpg
-      spell-detail.jpg
-      about.jpg
-      loading.jpg
-
-E o README exibirá automaticamente.
-
-------------------------------------------------------------------------
-
 ## 📜 Licença / Observações
 
 Projeto acadêmico, sem fins comerciais.\
