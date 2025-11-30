@@ -3,7 +3,7 @@
  * https://docs.expo.io/guides/color-schemes/
  */
 
-import { Text as DefaultText, View as DefaultView } from 'react-native';
+import { Text as DefaultText, View as DefaultView, Platform } from 'react-native';
 
 import Colors from '@/constants/Colors';
 import { useColorScheme } from './useColorScheme';
@@ -34,7 +34,13 @@ export function Text(props: TextProps) {
   const { style, lightColor, darkColor, ...otherProps } = props;
   const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
 
-  return <DefaultText style={[{ color }, style]} {...otherProps} />;
+  // Aplica uma fontFamily padrão que funciona em web e native.
+  // Em native, os nomes registrados pelo @expo-google-fonts geralmente são
+  // 'Poppins_400Regular', 'Poppins_700Bold', etc. No web, usar o nome base 'Poppins'
+  // e controlar peso via fontWeight.
+  const defaultFont = Platform.OS === 'web' ? { fontFamily: 'Poppins' } : { fontFamily: 'Poppins_400Regular' };
+
+  return <DefaultText style={[defaultFont, { color }, style]} {...otherProps} />;
 }
 
 export function View(props: ViewProps) {

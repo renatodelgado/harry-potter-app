@@ -1,57 +1,65 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Tabs } from 'expo-router';
 import React from 'react';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable } from 'react-native';
-
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
-import { useClientOnlyValue } from '@/components/useClientOnlyValue';
-
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
+import { useHouse } from '../../contexts/HouseThemeContext';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+  const { colors } = useHouse();
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-        headerShown: useClientOnlyValue(false, true),
-      }}>
+        headerShown: true,
+        headerTitleAlign: 'center',
+        headerStyle: { backgroundColor: colors.primary },
+        tabBarActiveTintColor: colors?.activeBar ?? '#FFD700',
+        tabBarInactiveTintColor: colors?.inactiveBar ?? '#AAAAAA',
+        tabBarStyle: {
+          backgroundColor: colors?.primary,
+          borderTopWidth: 0,
+          elevation: 15,
+          height: 70,
+          paddingBottom: 10,
+          paddingTop: 8
+        },
+        tabBarLabelStyle: {
+          fontWeight: 'bold',
+          fontSize: 12,
+        },
+
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          fontSize: 22,
+        },
+      }}
+    >
+
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
+          title: 'Hogwarts',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="castle" size={28} color={color} />,
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="characters"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Personagens',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="wizard-hat" size={26} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="spells"
+        options={{
+          title: 'Feitiços',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="auto-fix" size={28} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="about"
+        options={{
+          title: 'Sobre',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="information" size={28} color={color} />,
         }}
       />
     </Tabs>
