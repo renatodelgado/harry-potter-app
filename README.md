@@ -14,7 +14,7 @@ temáticas das quatro casas de Hogwarts.
 
 ------------------------------------------------------------------------
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 -   Seleção de Casas de Hogwarts com tema visual\
 -   Lista completa de personagens com busca e filtro por casa\
@@ -28,7 +28,7 @@ temáticas das quatro casas de Hogwarts.
 
 ------------------------------------------------------------------------
 
-## 🧰 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 -   **Expo SDK 51+**\
 -   **React Native** + **TypeScript**\
@@ -47,7 +47,7 @@ API pública não oficial do universo Harry Potter.
 
 ------------------------------------------------------------------------
 
-## 📁 Estrutura de pastas (principais)
+## Estrutura de pastas (principais)
 
     app/
     ├── (tabs)/
@@ -67,7 +67,7 @@ API pública não oficial do universo Harry Potter.
 
 ------------------------------------------------------------------------
 
-## ▶️ Como rodar o projeto
+## Como rodar o projeto
 
 ``` powershell
 # 1. Clonar o repositório
@@ -88,7 +88,30 @@ npx expo start -c
 
 ------------------------------------------------------------------------
 
-## 📜 Licença / Observações
+## Screenshots
+
+### Tela Inicial
+![Home](./screenshots/home.jpg)
+
+### Tela do Salão Comunal
+![House](./screenshots/house.jpg)
+
+### Lista de Personagens
+![Characters](./screenshots/characters.jpg)
+
+### Detalhe do Personagem
+![Character Detail](./screenshots/character-detail.jpg)
+
+### Lista de Feitiços
+![Spells](./screenshots/spells.jpg)
+
+### Sobre
+![About](./screenshots/about.jpg)
+
+------------------------------------------------------------------------
+
+
+## Licença / Observações
 
 Projeto acadêmico, sem fins comerciais.\
 Todo o conteúdo de Harry Potter pertence à Warner Bros. e J.K. Rowling.\
@@ -96,6 +119,6 @@ A API utilizada é pública e usada apenas para fins educacionais.
 
 ------------------------------------------------------------------------
 
-## ✨ Feito com dedicação e um pouco de magia
+## Feito com dedicação e um pouco de magia
 
 **Renato Delgado --- 2025**
