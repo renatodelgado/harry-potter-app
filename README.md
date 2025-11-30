@@ -40,7 +40,7 @@ temáticas das quatro casas de Hogwarts.
 
 ------------------------------------------------------------------------
 
-## 🌐 API utilizada
+## API utilizada
 
 https://hp-api.onrender.com/api\
 API pública não oficial do universo Harry Potter.
@@ -97,7 +97,7 @@ npx expo start -c
 <img src="./screenshots/house.jpg" width="300" />
 
 ### Lista de Personagens
-<img src="./screenshots/character.jpg" width="300" />
+<img src="./screenshots/characters.jpg" width="300" />
 
 ### Detalhe do Personagem
 <img src="./screenshots/character-detail.jpg" width="300" />
