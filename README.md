@@ -91,22 +91,22 @@ npx expo start -c
 ## Screenshots
 
 ### Tela Inicial
-![Home](./screenshots/home.jpg)
+<img src="./screenshots/home.jpg" width="300" />
 
 ### Tela do Salão Comunal
-![House](./screenshots/house.jpg)
+<img src="./screenshots/house.jpg" width="300" />
 
 ### Lista de Personagens
-![Characters](./screenshots/characters.jpg)
+<img src="./screenshots/character.jpg" width="300" />
 
 ### Detalhe do Personagem
-![Character Detail](./screenshots/character-detail.jpg)
+<img src="./screenshots/character-detail.jpg" width="300" />
 
 ### Lista de Feitiços
-![Spells](./screenshots/spells.jpg)
+<img src="./screenshots/spells.jpg" width="300" />
 
 ### Sobre
-![About](./screenshots/about.jpg)
+<img src="./screenshots/about.jpg" width="300" />
 
 ------------------------------------------------------------------------
 
